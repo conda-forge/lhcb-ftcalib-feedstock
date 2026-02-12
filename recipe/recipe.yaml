@@ -14,7 +14,7 @@ source:
   sha256: d0076a73fddd1c61706064d34db3f15e00ae33d06f978fa3cf2186f9d04fe9d4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -40,7 +40,7 @@ requirements:
 tests:
   - requirements:
       run:
-        - python >=${{ python_min }}.*
+        - python >=${{ python_min }}
         - pip
     script:
       - pip install sweights
